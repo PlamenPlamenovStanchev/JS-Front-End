@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with HTML Attributes</title>
+</head>
+<body>
+    
+    <div id="value" name="somename" class="class1 class2 class3" data-index="0"></div>
+
+    <script>
+
+        const divElement = document.querySelector('#value');
+
+        divElement.getAttribute('id');
+        divElement.setAttribute('name', 'Name is David');
+
+        const newClass = 'purple'
+        divElement.setAttribute('class', divElement.getAttribute('class') + ' ' + newClass);
+
+        divElement.classList.add('purple');
+        divElement.classList.remove('purple');
+        divElement.classList.toggle('purple');
+
+        console.log( divElement.getAttribute('data-index') );
+        console.log( divElement.dataset.index = 5 );
+
+
+    </script>
+
+</body>
+</html>
